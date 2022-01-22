@@ -9,21 +9,98 @@
 <body>
     <header class="header">
         <div class="conteiner">
-            <h1 class="Музыка Qw3ko">Музыка Qw3ko</h1>
+            <h1 align="center" class="Музыка Qw3ko">Музыка Qw3ko</h1>
         </div>
     </header>
     <main>
         <div class="container">
-            <h2 class="forms">Связаться со мной</h2>
+            <h2 class="forms">Поиск музыки</h2>
             <form>
-                Год выпуска альбома/сингла <input type="text" name="year" placeholder="Введите год">
+                <fieldset>
+                    <legend>Здесь вы можете найти определенную музыку по критериям</legend>
+                <p>Альбом/сингл</p> 
+                Альбом <input type="radio" name="album" value="album" checked>
+                Сингл <input type="radio" name="album" value="single">
+                <br>
+                <br>
+                Жанр
+                <br>
+                <br>
+                <input type="checkbox" name="genre1" value="Ambient">Ambient<br>
+                <input type="checkbox" name="genre2" value="Country">Country<br>
+                <input type="checkbox" name="genre3" value="Electronic">Electronic<br>
+                <input type="checkbox" name="genre4" value="Rock">Rock<br>
+                <br>
+                Год выпуска
+                <br>
+                <br>
+                <select name="year">
+                    <option label=""></option>
+                    <option label="2016">2016</option>
+                    <option label="2017">2017</option>
+                    <option label="2018">2018</option>
+                    <option label="2019">2019</option>
+                    <option label="2020" disabled>2020</option>
+                </select>
+                <br>
+                <br>
+                Цвет альбома/сингла
+                <br>
+                <br>
+                <input type="color" list="colorlist" value="#00BFFF">
+                <datalist id="colorlist">
+                    <option value="#000000" label="Чёрный"></option>
+                    <option value="#483D8B" label="Фиолетовый"></option>
+                    <option value="#FFFFFF" label="Белый"></option>
+                    <option value="#F0E68C" label="Жёлтый"></option>
+                </datalist>
+                <br>
+                <br>
+                Дата выпуска
+                <br>
+                <br>
+                <input type="date" name="date" value="2019-03-31" min="2016-05-01" max="2019-12-31">
+                <br>
+                <br>
+                Email для связи
+                <br>
+                <br>
+                <input type="email" name="email">
+                <br>
+                <br>
+                Телефон для связи
+                <br>
+                <br>
+                <input type="tel" name="phone">
+                <br>
+                <br>
+                <input type="submit" name="submit" value="Найти">
+                <input type="reset" name="reset">
+            </fieldset>
+            <p>Этап выполнения работы</p>
+            <progress value="25" max="100"></progress>
             <br>
             <br>
-            Жанр <input type="text" name="genre" placeholder="Введите жанр" required="required">
+            <fieldset>
+                <legend>Обратная связь</legend>
+                Оцените мои работы
+                <input type="range" min="0" max="10" step="1" value="7">
+                <br>
+                <br>
+                Здесь вы можете написать свою критику
+                <br>
+                <textarea name="comment" id="" cols="50" rows="7" placeholder="Ваша критика"></textarea>
+                <br>
+                <br>
+                Порекомендуете ли мои песни?
+                <label for="yes">Да</label>
+                <input type="radio" id="yes" name="choise" value="yes" checked>
+                <label for="no">Нет</label>
+                <input type="radio" id="no" name="choise" value="no">
+            </fieldset>
             <br>
             <br>
-            <input type="submit">
-
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4WKy8FO3VHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </form>
         </div>
     </main>
